@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,  initial-scale=1.0" />
+
+		<!-- Favicons -->
+		<link type="image/png" sizes="32x32" rel="icon" href="../Assets/Favicons/5.favicon-32x32.png" />
+
+		<link rel="stylesheet" href="../CSS/styles1.css" />
+
+		<title>JS Assessment-5</title>
+	</head>
+	<body>
+		<main>
+			<header class="headings">
+				<h1 id="h1-heading1">JS Strings.</h1>
+			</header>
+			<section id="sec1">
+				<details id="ans1" class="answers">
+					<summary id="que1" class="questions">
+						&nbsp;<span class="que-name-span"> Count Characters.</span>
+						<br />
+						<p class="que-main-para">
+							You are given a string <code class="code-var">S</code>, and your task is to return an array <code class="code-var">B</code>(having a size of 2), where <code class="code-var">B[0]</code> contains the count of character <code class="code-var">A</code>(uppercase) in string
+							<code class="code-var">S</code> and <code class="code-var">B[1]</code> contains the count of character <code class="code-var">D</code>(uppercase) in string <code class="code-var">S</code> .
+						</p>
+						<p class="question-note">
+							<strong>Note: </strong>
+							Complete the <code class="code-var">countCharacters</code> function. No need to take any input.
+						</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const countCharacters = (S) => {
+    var B = [];
+    var countA = 0, countD = 0;
+    for(let i=0; i &lt; S.length; i++){
+        if(S[i] === "A"){
+            countA++;
+        }
+        else if(S[i] === "D"){
+            countD++
+        }
+    }
+    B.push(countA);
+    B.push(countD);
+    return B;
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans2" class="answers">
+					<summary id="que2" class="questions">
+						&nbsp;<span class="que-name-span"> Count the Heads.</span>
+						<p class="que-main-para">
+							Tina is given a string <code class="code-var">S</code> which contains the first letter of all the student names in her class. She got a curiosity to check how many people have their names starting from the same alphabet. So given a string <code class="code-var">S</code> ,
+							she decided to write a code that finds out the count of characters that occur more than once in the string.
+						</p>
+						<p class="question-note">
+							<strong>Note: </strong>Complete the <code class="code-var">Count_Occ</code>
+							function. No need to take any input.
+						</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>
+                            .
+                        </code></pre>
+					</div>
+				</details>
+				<details id="ans3" class="answers">
+					<summary id="que3" class="questions">
+						&nbsp;<span class="que-name-span"> Count the Vowels.</span>
+						<p class="que-main-para">You are given a string <code class="code-var">S</code> containing both uppercase and lowercase letters. You need to find out the number of vowels in the given string.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Count_Vowels</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>var Count_Vowels= (S) =>{
+    var count = 0;
+    for(let i=0; i &lt; S.length; i++){
+        if(S[i]==="A"||S[i]==="a"||S[i]==="E"||S[i]==="e"||S[i]==="I"
+        ||S[i]==="i"||S[i]==="O"||S[i]==="o"||S[i]==="U"||S[i]=="u"){
+            count++;
+        }
+    }
+    return count;
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans4" class="answers">
+					<summary id="que4" class="questions">
+						&nbsp;<span class="que-name-span"> Concatenate the Strings.</span>
+						<p class="que-main-para">You are given two strings <code class="code-var">S1</code> and <code class="code-var">S2</code> (containing both uppercase and lowercase letters), You need to retrun a string which is the concatenation of both the given strings.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Concatenate_Strings</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>var Concatenate_Strings = (S1, S2) => {
+    S3 = S1+S2;
+    return S3;
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans5" class="answers">
+					<summary id="que5" class="questions">
+						&nbsp;<span class="que-name-span"> Find Length.</span>
+						<p class="que-main-para">You are given a string <code class="code-var">S</code>, and your task is to return the length of the string <code class="code-var">S</code> .</p>
+						<p class="question-note"><strong>Note:</strong> You have to solve it without using length method. Complete the <code class="code-var">findLength</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const findLength = (S) => {
+    var count = 0;
+    for(i=0; i &lt; S.length; i++){
+        count++;
+    }
+    return count;
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans6" class="answers">
+					<summary id="que6" class="questions">
+						&nbsp;<span class="que-name-span"> Find the Winner.</span>
+						<p class="que-main-para">
+							You are given a string <code class="code-var">S</code> consisting of two letters <code class="code-var">A</code> and <code class="code-var">D</code>, where each character represent the winner of N games played between Aditya and Danish, where letter
+							<code class="code-var">A</code> represents the win of Aditya and letter <code class="code-var">D</code> represents the win of Danish. You need to find out the that which player wins the maximum number of games or there is a draw between them.
+						</p>
+						<p class="question-note"><strong>Note: Also, in the output array, the age should be in the same order as in the input array.</strong> Complete the <code class="code-var">Game_Winner</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>var Game_Winner = (S) => {
+    var Aditya = 0;
+    var Danish = 0;
+    for(let i=0; i &lt; S.length; i++){
+        if(S[i]==="A"){
+            Aditya++;
+        }
+        else Danish++;
+    }
+    if(Aditya!==Danish){
+        if(Aditya &lt; Danish){
+            return "Danish";
+        }
+        else return "Aditya";
+    }
+    else return "Draw";
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans7" class="answers">
+					<summary id="que7" class="questions">
+						&nbsp;<span class="que-name-span"> Join Strings. </span>
+						<p class="que-main-para">You are given two strings <code class="code-var">S</code> and <code class="code-var">P</code>, and your task is to concatenate them and return the concatenated string.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">joinStrings</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const joinStrings = (S, P) => {
+    let str=''
+    str=S+P
+    return str
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans8" class="answers">
+					<summary id="que8" class="questions">
+						&nbsp;<span class="que-name-span"> Plaindrome Check.</span>
+						<p class="que-main-para">
+							You are given a string <code class="code-var">S</code>, Your task is to check wether the given string is a <code class="code-var">Palindrome</code>or not. A <code class="code-var">Palindrome</code> is a string, which turnout same when read in reverse direction.
+							<br />
+							Example: "naman" is a Palindrome. String can contain both upppercase lowercase letters.
+						</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Palin_Check</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>var Palin_Check = (str) => {
+    var i = 0;
+    j = str.length - 1;
+    while (i &lt; j) {
+        if (str.charAt(i) !== str.charAt(j)){
+            return "False";
+        }
+        i++;
+        j--;
+    }
+    return "True";
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans9" class="answers">
+					<summary id="que9" class="questions">
+						&nbsp;<span class="que-name-span"> Reverse the String.</span>
+						<p class="que-main-para">You are given a string <code class="code-var">S</code>, Your task is to Reverse the string. String can contain both upppercase lowercase letters.</p>
+						<p class="question-note"><strong>Note:</strong> You have to complete <code class="code-var">Reverse_String</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>var Reverse_String = (str) => {
+    arr = [];
+    reverseStr = "";
+    for(let i=str.length-1; i>=0; i--){
+        reverseStr += str[i]
+    }
+
+    return reverseStr;
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans10" class="answers">
+					<summary id="que10" class="questions">
+						&nbsp;<span class="que-name-span"> Match the Strings. </span>
+						<p class="que-main-para">You are given two strings <code class="code-var">S1</code> and <code class="code-var">S2</code>, Your task is to print <b>YES</b> if both strings are same else print <b>NO</b>.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">String_Match</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>var String_Match = (S1,S2) => {
+    if(S1==S2){
+        return 'YES';
+    }
+    else{
+        return 'NO';
+    } 
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans11" class="answers">
+					<summary id="que11" class="questions">
+						&nbsp;<span class="que-name-span"> String Replace.</span>
+						<p class="que-main-para">You are given a string <code class="code-var">S</code>, along with a pattern string and a text string. You need to repalce the pattern string in <code class="code-var">S</code> to the text string.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Replace</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>var Replace = (S, pattern , text) => {
+    return S.replace(pattern,text)
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans12" class="answers">
+					<summary id="que12" class="questions">
+						&nbsp;<span class="que-name-span"> Split the String.</span>
+						<p class="que-main-para">You are given a string <code class="code-var">S</code>, Your task is to split the string with respect to spaces.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Split_the_string</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>var Split_the_string = (S) => {
+word = ""
+arr = []
+for(let i=0;i &lt; S.length;i++){
+    if(S[i]!==" "){
+        word += S[i]
+    }
+    else{
+        arr.push(word);
+        word = ""
+    }
+}
+arr.push(word)
+return arr
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans12" class="answers">
+					<summary id="que12" class="questions">
+						&nbsp;<span class="que-name-span"> Count the Vowels and Consonants.</span>
+						<p class="que-main-para">You are given a string <code class="code-var">S</code> containing both uppercase and lowercase letters. You need to find out the number of vowels and the number of consonants in the given string.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Split_the_string</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>var Count_Vowels= (S) => {
+    S=S.toUpperCase();
+    let countV=0;
+    for(i=0;i &lt; S.length;i++){
+        if(S[i]=='A' || S[i]=='E' || S[i]=='O' || S[i]=='I' || S[i]=='U'){
+            countV+=1;
+        }
+    }
+    return countV;
+};
+var Count_Consonants= (S) => {
+    S=S.toUpperCase();
+    let countV=0;
+    let countC=0;
+    for(i=0;i &lt; S.length;i++){
+        if(S[i]=='A' || S[i]=='E' || S[i]=='O' || S[i]=='I' || S[i]=='U'){
+            countV+=1;
+        }
+        else{
+            countC+=1;
+        }
+    }
+    return countC;
+};</code></pre>
+					</div>
+				</details>
+			</section>
+		</main>
+	</body>
+</html>

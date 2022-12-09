@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,  initial-scale=1.0" />
+
+        <!-- Favicons -->
+        <link type="image/png" sizes="32x32" rel="icon" href="../Assets/Favicons/6.favicon-32x32.png">
+
+        <link rel="stylesheet" href="../CSS/styles1.css" />
+
+        <title>JS Assessment-4</title>
+    </head>
+    <body>
+        <main>
+            <header class="headings">
+                <h1 id="h1-heading1">JS Arrays.</h1>
+            </header>
+            <section id="sec1">
+                <details id="ans1" class="answers">
+                    <summary id="que1" class="questions">
+                        &nbsp;<span class="que-name-span"> Find the Product.</span>
+                        <br />
+                        <p class="que-main-para">Write a program that takes an array as input from the user and find out the product of the elements.</p>
+                        <p class="question-note">
+                            <strong>Note: </strong>
+                            Complete the <code class="code-var">Find_Prod</code> function. No need to take any input.
+                        </p>
+                    </summary>
+                    <div class="details-flex">
+                        <div class="div-flex-child1">Ans:-</div>
+                        <pre><code>const Find_Prod = (array, N) => {
+    var product = 1;
+    for(let i=0; i&lt;=N; i++){
+        if(typeof array[i] == `number`){
+        product = array[i] * product;
+        }
+    }
+    return product;
+};</code></pre>
+                    </div>
+                </details>
+                <details id="ans2" class="answers">
+                    <summary id="que2" class="questions">
+                        &nbsp;<span class="que-name-span"> Find the Sum.</span>
+                        <p class="que-main-para">Write a program which takes an array as input from the user and find out the sum of the array elements.</p>
+                        <p class="question-note">
+                            <strong>Note: </strong>Complete the <code class="code-var">Find_Sum</code>
+                            function. No need to take any input.
+                        </p>
+                    </summary>
+                    <div class="details-flex">
+                        <div class="div-flex-child1">Ans:-</div>
+                        <pre><code>const Find_Sum = (array, N) => {
+    var sum = 0;
+    for (var i = 0; i &lt; array.length; i++) {
+        if(typeof array[i] == `number`) {
+            sum += array[i];
+        }  
+    }
+    return sum;
+};</code></pre>
+                    </div>
+                </details>
+                <details id="ans3" class="answers">
+                    <summary id="que3" class="questions">
+                        &nbsp;<span class="que-name-span"> Count Occurrences.</span>
+                        <p class="que-main-para">
+                            You are given an array <code class="code-var">A</code> containing <code class="code-var">N</code> integer elements and an integer <code class="code-var">K</code>, and your task is to return the count of occurrences of <code class="code-var">K</code> in array
+                            <code class="code-var">A</code>
+                        </p>
+                        <p class="que-main-para">
+                            <strong>Input Format:</strong>
+                            The first line of the input contains two space-separated integers <code class="code-var">N</code> and <code class="code-var">K</code>, denoting the number of elements in the array <code class="code-var">A</code> and the element whose count needs to be determined,
+                            respectively. The second line of the input contains <code class="code-var">N</code> space-separated integers, denoting the elements of the array <code class="code-var">A</code> .
+                        </p>
+                        <p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">findCount</code> function. No need to take any input.</p>
+                    </summary>
+                    <div class="details-flex">
+                        <div class="div-flex-child1">Ans:-</div>
+                        <pre><code>const findCount = (N, K, Arr) => {
+    var count = 0;
+    for(let i=0; i&lt;Arr.length; i++){
+        if(Arr[i] === K){
+        count++
+        }
+    }
+    return count;
+};</code></pre>
+                    </div>
+                </details>
+                <details id="ans4" class="answers">
+                    <summary id="que4" class="questions">
+                        &nbsp;<span class="que-name-span"> Even Odd.</span>
+                        <p class="que-main-para">
+                            You are given an array <code class="code-var">A</code> containing <code class="code-var">N</code> integer elements, and your task is to return an array <code class="code-var">B</code> (having a size equal to 2), where <code class="code-var">B[0]</code> contains the sum of
+                            all even elements of array <code class="code-var">A</code> and <code class="code-var">B[1]</code> has the sum of all odd elements of the array <code class="code-var">A</code> .
+                        </p>
+                        <p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">findEvenOdd</code> function. No need to take any input.</p>
+                        <p class="que-main-para">
+                            <strong>Input Format:</strong>
+                            The first line of the input contains an integer <code class="code-var">N</code>, denoting the number of elements in the array <code class="code-var">A</code>. The second line of the input contains <code class="code-var">N</code> space-separated integers, denoting the
+                            elements of array <code class="code-var">A</code> .
+                        </p>
+                    </summary>
+                    <div class="details-flex">
+                        <div class="div-flex-child1">Ans:-</div>
+                        <pre><code>var sumEven = 0;
+var sumOdd = 0;
+const B = [];
+const findEvenOdd = (N, Arr) => {
+    for(let i=0; i&lt;Arr.length; i++){
+        var check = Arr[i]%2;
+        if((Arr[i]%2)===0){
+            sumEven = sumEven + Arr[i];
+        }
+        else{
+            sumOdd = sumOdd + Arr[i];
+        }
+    }
+    const B = [sumEven, sumOdd]
+    return B;
+};</code></pre>
+                    </div>
+                </details>
+                <details id="ans5" class="answers">
+                    <summary id="que5" class="questions">
+                        &nbsp;<span class="que-name-span"> Find whether the number is present or not.</span>
+                        <p class="que-main-para">Write a program which takes an array as input from the user and a number. Check whether the number is present or not.</p>
+                        <p class="que-main-para">
+                            <strong>Input Format:</strong>
+                            The first line contains an integer <code class="code-var">N</code>, denoting the size of the array. The second line contains <code class="code-var">N</code> space-separated integers, denoting the elements of the array. The third line contains an integer
+                            <code class="code-var">M</code>, denoting the element that needs to be searched.
+                        </p>
+                        <p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Find_Num</code> function. No need to take any input.</p>
+                    </summary>
+                    <div class="details-flex">
+                        <div class="div-flex-child1">Ans:-</div>
+                        <pre><code>const Find_Num = (array,N,M) => {
+    for(let i=0; i&lt;array.length; i++){
+        if(array[i] === M){
+            return "YES";
+        }
+    }
+    return "NO";
+};</code></pre>
+                    </div>
+                </details>
+                <details id="ans6" class="answers">
+                    <summary id="que6" class="questions">
+                        &nbsp;<span class="que-name-span"> Higher Age.</span>
+                        <p class="que-main-para">You are given an array <code class="code-var">A</code> containing the age of persons in your locality, and your task is to find and return an array containing the age of persons that are over 18 (18 included).</p>
+                        <p class="question-note"><strong>Note: Also, in the output array, the age should be in the same order as in the input array.</strong> Complete the <code class="code-var">highAge</code> function. No need to take any input.</p>
+                    </summary>
+                    <div class="details-flex">
+                        <div class="div-flex-child1">Ans:-</div>
+                        <pre><code>const highAge = (N, Arr) => {
+    var newArr = []
+    for(let i=0; i&lt;Arr.length; i++){
+        if(Arr[i]>=18){
+            newArr.push(Arr[i])
+        }
+    }
+    return newArr
+};</code></pre>
+                    </div>
+                </details>
+                <details id="ans7" class="answers">
+                    <summary id="que7" class="questions">
+                        &nbsp;<span class="que-name-span"> Increment the Array Elements. </span>
+                        <p class="que-main-para">You are provided an array of integers and you have to increment all array elements by 1 and then print whole array.</p>
+                        <p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Prime_Check</code> function. No need to take any input.</p>
+                    </summary>
+                    <div class="details-flex">
+                        <div class="div-flex-child1">Ans:-</div>
+                        <pre><code>const Inc_Arr = (array,N) => {
+    for(let i=0; i&lt;array.length; i++){
+        array[i] = array[i] + 1;
+        console.log(array[i]);
+    }
+};</code></pre>
+                    </div>
+                </details>
+                <details id="ans8" class="answers">
+                    <summary id="que8" class="questions">
+                        &nbsp;<span class="que-name-span"> Pass or Fail.</span>
+                        <p class="que-main-para">
+                            You are given an array <code class="code-var">A</code> containing the maths marks of students in your class, and your task is to determine if all the students pass in your class or not. A student is declared pass if his maths marks are greater than or equal to 32. If all
+                            the students pass in your class, return "YES" (without quotes); otherwise, return "NO" (without quotes)..
+                        </p>
+                        <p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">printNumbers</code> function. No need to take any input.</p>
+                    </summary>
+                    <div class="details-flex">
+                        <div class="div-flex-child1">Ans:-</div>
+                        <pre><code>const isAllPass = (N, Arr) => {
+    let flag=true;
+    for(let i=0;i&lt; N;i++){
+        if(Arr[i]&lt; 32){
+            flag=false;
+            break;
+        }
+    }
+    if(flag===true){
+        return "YES";
+    }
+    else if(flag===false){
+        return "NO";
+    }
+};</code></pre>
+                    </div>
+                </details>
+                <details id="ans9" class="answers">
+                    <summary id="que9" class="questions">
+                        &nbsp;<span class="que-name-span"> Unique Color Shirt.</span>
+                        <p class="que-main-para">
+                            Prepbuddy is very tasteful of clothes. He has <code class="code-var">N</code> numbers of shirts hanging in the hanger in his wardrobe. Prepbuddy likes to wear different colored clothes. So, whenever he see there are two or more shirts with the same color, he removes all
+                            the shirt of that color from his wardrobe. Now, he wants to know how many <code class="code-var">M</code> unique color shirts are left in the wardrobe. Prepbuddy wants you to find <code class="code-var">M</code> .
+                        </p>
+                        <p class="question-note"><strong>Note:</strong> As there are many shades of a color so consider integers as a color name. i.e, color of shirt is 0,1,2, … , N.</p>
+                    </summary>
+                    <div class="details-flex">
+                        <div class="div-flex-child1">Ans:-</div>
+                        <pre><code>function Unique_Shirts (arr,N) {
+    var temp=0;
+    var dress=0;
+    for(let i=0;i&lt; N;i++){
+        var compare=0;
+        for(let j=1;j&lt; N-1;j++){
+            if(arr[i]===arr[j]){
+                compare++;
+            }
+        }
+        if(compare==1){
+            temp=temp+arr[i];
+            dress++;
+        } 
+    }
+    return dress;
+}</code></pre>
+                    </div>
+                </details>
+                <details id="ans10" class="answers">
+                    <summary id="que10" class="questions">
+                        &nbsp;<span class="que-name-span"> Min and Max. </span>
+                        <p class="que-main-para">Congratulations on making up to this question. Let us give you a fairly simple array problem to solve. If you know how to iterate through the array, you will easily be able to solve this. The problem statement is simple- given <code class="code-var">N</code> elements, find the minimum and maximum numbers among those elements.</p>
+                        <p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Prime_Check</code> function. No need to take any input.</p>
+                    </summary>
+                    <div class="details-flex">
+                        <div class="div-flex-child1">Ans:-</div>
+                        <pre><code>function arrayMin(arr) {
+    var min = arr[0];
+    for(let i=1; i&lt;arr.length; i++){
+        if(min > arr[i]){
+            min = arr[i];
+        }
+    }
+    return min;
+}
+ 
+function arrayMax(arr) {
+    var max = arr[0];
+    for(let j=1; j&lt;arr.length; j++){
+        if(max &lt; arr[j]){
+        max = arr[j];
+        }
+    }
+    return max;
+};</code></pre>
+                    </div>
+                </details>
+                <details id="ans11" class="answers">
+                    <summary id="que11" class="questions">
+                        &nbsp;<span class="que-name-span"> Birthday Game.</span>
+                        <p class="que-main-para">Yatharth and Anamika are playing a game. Anamika loves Yatharth very much and she wants to share a chocolate bar with him in which each of the squares consists of an integer represented by <code class="code-var">A[i]</code>. She decides to share a contiguous segment of the chocolate bar selected such that the length of the segment matches Yatharth's birth month <code class="code-var">M</code> and the sum of the integers on the squares is equal to his birthday 
+                            <code class="code-var">D</code> . You must determine how many ways she can divide the chocolate.</p>
+                        <p class="que-main-para">
+                            <strong>Input Format:</strong>
+                            <ul style="list-style-type: disc;">
+                                <li>The first line consists of an integer <code class="code-var">N</code> which denotes the number of squares in the chocolate bar. </li>
+                                <li>The second line consists of <code class="code-var">N</code> space-separated integers <code class="code-var">A[i]</code>, consisting of numbers on the chocolate bar squares.</li>
+                                <li>The third line contains an integer <code class="code-var">D</code> and <code class="code-var">M</code> which denotes Yatharth's birthday and his birth month respectively.</li>
+                            </ul>
+                        </p>
+                    </summary>
+                    <div class="details-flex">
+                        <div class="div-flex-child1">Ans:-</div>
+                        <pre><code>function Birthday_Game(arr,D ,M) {
+    var count = 0;
+    for(let i=0; i&lt; arr.length-M+1; i++){
+        var sum = 0;
+        for(let j=i; j&lt; M+i; j++){
+            sum = arr[j] + sum;
+        }
+        if(sum===D){
+            count++;
+        }
+    }
+    return count;
+}</code></pre>
+                    </div>
+                </details>
+            </section>
+        </main>
+    </body>
+</html>

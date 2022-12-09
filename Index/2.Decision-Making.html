@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,  initial-scale=1.0" />
+
+		<!-- Favicons -->
+		<link type="image/png" sizes="32x32" rel="icon" href="../Assets/Favicons/2.favicon-32x32.png" />
+
+		<link rel="stylesheet" href="../CSS/styles1.css" />
+
+		<title>JS Assessment-2</title>
+	</head>
+	<body>
+		<main>
+			<header class="headings">
+				<h1 id="h1-heading1">JS Decision Making.</h1>
+			</header>
+			<section id="sec1">
+				<details id="ans1" class="answers">
+					<summary id="que1" class="questions">
+						&nbsp;<span class="que-name-span">Calculator.</span>
+						<br />
+						<p class="que-main-para">Write a program to make a simple calculator using switch statement that takes operator and two numbers from user and print the result after operation.</p>
+						<p class="que-main-para">
+							<strong>Input Format:</strong>
+							Write a program to make a simple calculator using switch statement that takes operator and two numbers from user and print the result after operation.
+						</p>
+						<p class="question-note">
+							<strong>Note: </strong>
+							Complete the <code class="code-var">Calculator</code> function. No need to take any input.
+						</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const Calculator = (A, B, C) =>{
+    switch(A){
+        case "+":
+            return (B+C);
+        case "-":
+            return (B-C);
+        case "*":
+            return (B*C);
+        case "/":
+            return (B/C);
+    }
+};</code></pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans2" class="answers">
+					<summary id="que2" class="questions">
+						&nbsp;<span class="que-name-span"> Check whether the condition is fulfilled or not? </span>
+						<p class="que-main-para">Write a program that takes a number and prints whether the number is divisible by 6 and 9 or not.</p>
+						<p class="question-note">
+							<strong>Note: </strong>Complete the <code class="code-var">Check_divisibility</code>
+							function. No need to take any input.
+						</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const Check_divisibility = (N) => {
+    if(N%6 === 0 && N%9 === 0){
+        return "Divisible by both";
+    }
+    else{
+        return "Not Divisible by both";
+    }
+};</code></pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans3" class="answers">
+					<summary id="que3" class="questions">
+						&nbsp;<span class="que-name-span">Eligible Voter.</span>
+						<p class="que-main-para">You are given an integer <code class="code-var">a</code>, denoting the age of a person, and your task is, determine whether he/she is eligible to vote or not.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">isEligible</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const isEligible = (a) => {
+    if(a >= 18){
+        return "Eligible for Voting";
+    }
+    else{
+        return "Not Eligible for Voting";
+    }
+};</code></pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans4" class="answers">
+					<summary id="que4" class="questions">
+						&nbsp;<span class="que-name-span">Find Relation.</span>
+						<p class="que-main-para">
+							PrepBuddy wants you to get familiar with various Relational operators. He provides you with two integer values <code class="code-var">x</code> and <code class="code-var">y</code> and asks you to find the relation between them. The relationships between integers
+							<code class="code-var">x</code> and <code class="code-var">y</code> are as follows:
+						</p>
+						<!-- !update the ol -->
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">findRelationship</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const findRelation = (x,y) => {
+    if(x>y){
+       return (x + " is greater than "+y) ;
+    }
+    else if(x &lt; y){
+       return (x + " is smaller than "+y) ;
+    }
+    else{
+       return (x + " is equal to "+y) ;
+    }
+};</code></pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans5" class="answers">
+					<summary id="que5" class="questions">
+						&nbsp;<span class="que-name-span">Find Grades.</span>
+						<p class="que-main-para">Your school has the following grading system based upon the marks(M) obtained by a student:</p>
+						<!-- !ol -->
+						<p class="que-main-para">Your friend will enter his marks out of 50, and your task is to print his grades using a switch statement.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">findGrades</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const Last_Digit = (n) => {
+    var a = n%10;
+    return a;
+};</code></pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans6" class="answers">
+					<summary id="que6" class="questions">
+						&nbsp;<span class="que-name-span">Get Value.</span>
+						<p class="que-main-para">You are provided with a table containing some characters and their corresponding values. Your task will be to find the value from the table corresponding to an input character and return it.</p>
+						<table border="0">
+							<tbody>
+								<tr>
+									<!-- * usign inline CSS to give width to cells of 1st row.  -->
+									<td style="width: 5rem">| &nbsp; P or p</td>
+									<td style="width: 2rem">-</td>
+									<td style="width: 7rem">PrepBytes</td>
+									<td>|</td>
+								</tr>
+								<tr>
+									<td>| &nbsp; Z or z</td>
+									<td>-</td>
+									<td>Zenith</td>
+									<td>|</td>
+								</tr>
+								<tr>
+									<td>| &nbsp; E or e</td>
+									<td>-</td>
+									<td>Expert Coder</td>
+									<td>|</td>
+								</tr>
+								<tr>
+									<td>| &nbsp; D or d</td>
+									<td>-</td>
+									<td>Data Structures</td>
+									<td>|</td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">getValue</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const Find_the_remainder = (a,b) => {
+    return b%a;
+};</code></pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans7" class="answers">
+					<summary id="que7" class="questions">
+						&nbsp;<span class="que-name-span"> Find the maximum out of three numbers. </span>
+						<p class="que-main-para">Take three numbers and print the largest number among them if all of three are same print -1.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Max_out_of_three</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const Max_out_of_three = (A,B,C) => {
+    if(A > B && A > C) {
+        return (A);
+    }
+    else if(B > C && B > A){
+        return (B);
+    }
+    else if(C > A && C > B){
+        return (C);
+    }
+    else if(C == A && C == B){
+        return (-1);
+    }
+};</code></pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans8" class="answers">
+					<summary id="que8" class="questions">
+						&nbsp;<span class="que-name-span">Second Smallest.</span>
+						<p class="que-main-para">You are given 3 distinct integers <code class="code-var">x, y</code> and <code class="code-var">z</code> and your task is to find and return the second smallest integer among the three provided integers.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">findSndSmallest</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const findSndSmallest = (x,y,z) => {
+    if (x > y && y > z){
+        return y;
+    }else if (x > z && y &lt; z){
+        return z;
+    }else {
+        return x;
+    }
+};</code></pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans9" class="answers">
+					<summary id="que9" class="questions">
+						&nbsp;<span class="que-name-span">Check whether the triangle is Acute or Obtuse.</span>
+						<p class="que-main-para">Write a program takes takes three angles and checks whether the triangle is acute or obtuse.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Triangle_Check</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const Triangle_Check = (A,B,C) => {
+if (A > 90 || B > 90 || C > 90){
+    return ("obtuse");
+}else if (A === 90 || B === 90 || C === 90){
+    return ("right-angled")
+    }   
+        return ("acute");
+};</code></pre>
+					</div>
+				</details>
+			</section>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,  initial-scale=1.0" />
+
+		<!-- Favicons -->
+		<link type="image/png" sizes="32x32" rel="icon" href="../Assets/Favicons/3.favicon-32x32.png" />
+
+		<link rel="stylesheet" href="../CSS/styles1.css" />
+
+		<title>JS Assessment-3</title>
+	</head>
+	<body>
+		<main>
+			<header class="headings">
+				<h1 id="h1-heading1">JS Iteration Statements.</h1>
+			</header>
+			<section id="sec1">
+				<details id="ans1" class="answers">
+					<summary id="que1" class="questions">
+						&nbsp;<span class="que-name-span"> Find the number of digits.</span>
+						<br />
+						<p class="que-main-para">Take a number from the user and print the count of digits in that number.</p>
+						<p class="question-note">
+							<strong>Note: </strong>
+							Complete the <code class="code-var">Find_Digits</code> function. No need to take any input.
+						</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const Find_Digits = (N) => 
+{
+    var count = 0;
+    while(N >= 1){
+        N = (N/10);
+        count++;
+    }
+    return (count);
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans2" class="answers">
+					<summary id="que2" class="questions">
+						&nbsp;<span class="que-name-span"> Find the Fives.</span>
+						<p class="que-main-para">Among all the digits from 0−9, PrepBuddy likes number 5. He has a number and wants you to find out the number of times 5 occurred in the given number.</p>
+						<p class="question-note">
+							<strong>Note: </strong>Complete the <code class="code-var">Find_Five</code>
+							function. No need to take any input.
+						</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const Find_Five = (N) => 
+{
+    var count = 0;
+    var M = 0;
+    while(M >= 1){
+        M = N%10;
+        if (M === 5){
+            count++;
+            return count;
+        }
+    }
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans3" class="answers">
+					<summary id="que3" class="questions">
+						&nbsp;<span class="que-name-span"> Find Sum.</span>
+						<p class="que-main-para">You are given an integer <code class="code-var">N</code>, and your task is to find the sum of all the even integers starting from 1 upto <code class="code-var">N(Ninclusive)</code>.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">findSum</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const findSum = (n) => {
+    var j = 0;
+    for(var i=0; i &lt;= n; i++ ){
+        if(i%2 === 0){
+        j = j+i;
+        }
+    }
+    return j; 
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans4" class="answers">
+					<summary id="que4" class="questions">
+						&nbsp;<span class="que-name-span"> Find the sum of the digits of a given number.</span>
+						<p class="que-main-para">Write a program that takes a number from the user and get the sum of the digits present in the number.</p>
+						<!-- !update the ol -->
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Number_Sum</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const Number_Sum = (N) => {
+    var O = 0;
+    while(N >= 1){
+        var M = N%10;
+        O = M+O;
+        N = parseInt(N/10);
+    }
+    return O;
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans5" class="answers">
+					<summary id="que5" class="questions">
+						&nbsp;<span class="que-name-span"> Print the Odds.</span>
+						<p class="que-main-para">Write a program which takes a number from user and print all odd numbers in between 2 and <code class="code-var">N</code>, but print 2 first.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Print_Odd</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const Print_Odd = (N) =>{
+    for( var i=2 ; i &lt;= N ; i++){
+        if(i === 2){
+            console.log(i);
+        }
+        else{
+            if(i%2 === 1){
+                console.log(i);
+            }
+        }
+    }
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans6" class="answers">
+					<summary id="que6" class="questions">
+						&nbsp;<span class="que-name-span"> Print the Pattern.</span>
+						<p class="que-main-para">Write a program which ask user for no of lines and print a pattern using an asterik.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Print_pattern</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const Print_pattern = (N) => {
+    for( var i = 1; i &lt; N; i++){
+        var s = "";
+        for( var j = 1; j &lt; i; j++){
+            s = s+"*";
+        }
+        console.log(s);
+    }
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans7" class="answers">
+					<summary id="que7" class="questions">
+						&nbsp;<span class="que-name-span"> Check whether a Number is a prime or not. </span>
+						<p class="que-main-para">Write a program which takes a number from user and check whether number is prime number or not a prime number.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Prime_Check</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const Prime_Check = (N) => {
+    if(N === 1){
+        return "NO"
+    }
+    else{
+        for(var i = 2; i &lt; N ; i++){
+            if( N%i === 0){
+                return "NO";
+            }
+        }
+    return "YES";
+    }
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans8" class="answers">
+					<summary id="que8" class="questions">
+						&nbsp;<span class="que-name-span"> Print Numbers.</span>
+						<p class="que-main-para">You are given an integer <code class="code-var">N</code>, and your task is to print all the integers starting from 1 upto <code class="code-var">N(Ninclusive)</code>.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">printNumbers</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const printNumbers = (n) => {
+    for(let i = 1;i &lt;= n;i++){
+        console.log(i)
+    }
+};</code></pre>
+					</div>
+				</details>
+				<details id="ans9" class="answers">
+					<summary id="que9" class="questions">
+						&nbsp;<span class="que-name-span"> Print the Table.</span>
+						<p class="que-main-para">Write a program which takes a number from user and print the table.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Triangle_Check</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>const Print_Table = (N) => {
+    for(var i = 1; i &lt;= 10; i++){
+        console.log(`${N} * ${i} = `,N*i)
+    }
+};</code></pre>
+					</div>
+				</details>
+			</section>
+		</main>
+	</body>
+</html>
