@@ -20,36 +20,41 @@
 	</head>
 	<body>
 		<div class="main-container">
-			<div id="header">
-				<div id="subHeader1" class="subHeaderRows">
-					<img src="./Assets/Images/javascript.svg" alt="Java Script file icon." />
-					<p class="headerPara">Javascript Coding Questions.</p>
-					<div id="progress-container">
-						<progress class="headerProgressBar" max="100" value="72"></progress>
-						<div id="progressText">72% Completed.</div>
+			<header id="hello-msg">console.log("Hello..");</header>
+			<div id="main-parent">
+				<div id="header">
+					<div id="subHeader1" class="subHeaderRows">
+						<img src="./Assets/Images/javascript.svg" alt="Java Script file icon." />
+						<p class="headerPara">Javascript Coding Questions.</p>
+						<div id="progress-container">
+							<progress class="headerProgressBar" max="100" value="72"></progress>
+							<div id="progressText">72% Done.</div>
+						</div>
+					</div>
+					<div id="subHeader2" class="subHeaderRows">
+						<p id="subHeader2-para1">Total Questions: 86</p>
+						<div id="solved-div">
+							<div id="solved-color"></div>
+							<p id="solved-para">Solved: 62</p>
+						</div>
+						<button id="button" onclick="myFunction()" class="show-text"></button>
 					</div>
 				</div>
-				<div id="subHeader2" class="subHeaderRows">
-					<p id="subHeader2-para1">Total Questions: 86</p>
-					<div id="solved-div">
-						<div id="solved-color"></div>
-						<p id="solved-para">Solved: 62</p>
+				<div id="content-div-parent">
+					<div id="content-div" class="no-display">
+						<a id="contentBox1" class="contentBox" href="./Index/1.Operators&Exressions.html" target="_blank"
+							>Oprators & <br />
+							Expressions</a
+						>
+						<a id="contentBox2" class="contentBox" href="./Index/2.Decision-Making.html" target="_blank">Decision Making.</a>
+						<a id="contentBox3" class="contentBox" href="./Index/3.Iteration-Statements.html" target="_blank">Iteration Statements.</a>
+						<a id="contentBox4" class="contentBox" href="./Index/4.Arrays.html" target="_blank">Arrays.</a>
+						<a id="contentBox5" class="contentBox" href="./Index/5.Strings.html" target="_blank">Strings.</a>
+						<a id="contentBox6" class="contentBox" href="./Index/6.Problem-Solving.html" target="_blank">Problem Solving.</a>
+						<a id="contentBox7" class="contentBox" href="./Index/7.Objects.html" target="_blank">Objects.</a>
+						<a id="contentBox8" class="contentBox" href="./Index/8.Assignment.html" target="_blank">Assignments.</a>
 					</div>
-					<button id="button" onclick="myFunction()" class="show-text"></button>
 				</div>
-			</div>
-			<div id="content-div" class="no-display">
-				<a id="contentBox1" class="contentBox" href="./Index/1.Operators&Exressions.html" target="_blank"
-					>Oprators & <br />
-					Expressions</a
-				>
-				<a id="contentBox2" class="contentBox" href="./Index/2.Decision-Making.html" target="_blank">Decision Making.</a>
-				<a id="contentBox3" class="contentBox" href="./Index/3.Iteration-Statements.html" target="_blank">Iteration Statements.</a>
-				<a id="contentBox4" class="contentBox" href="./Index/4.Arrays.html" target="_blank">Arrays.</a>
-				<a id="contentBox5" class="contentBox" href="./Index/5.Strings.html" target="_blank">Strings.</a>
-				<a id="contentBox6" class="contentBox" href="./Index/6.Problem-Solving.html" target="_blank">Problem Solving.</a>
-				<a id="contentBox7" class="contentBox" href="./Index/7.Objects.html" target="_blank">Objects.</a>
-				<a id="contentBox8" class="contentBox" href="./Index/8.Assignment.html" target="_blank">Assignments.</a>
 			</div>
 		</div>
 		<script src="./Scripts/main.js"></script>

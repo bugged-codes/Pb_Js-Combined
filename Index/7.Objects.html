@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,  initial-scale=1.0" />
+
+		<!-- Favicons -->
+		<link type="image/png" sizes="32x32" rel="icon" href="../Assets/Favicons/6.favicon-32x32.png" />
+
+		<link rel="stylesheet" href="../CSS/styles1.css" />
+
+		<title>JS Assessment-6</title>
+	</head>
+	<body>
+		<main>
+			<header class="headings">
+				<h1 id="h1-heading1">JS Problem Solving.</h1>
+			</header>
+			<section id="sec1">
+				<details id="ans1" class="answers">
+					<summary id="que1" class="questions">
+						&nbsp;<span class="que-name-span"> Find the Smaller Angle.</span>
+						<br />
+						<p class="que-main-para">
+							PrepBuddy has an analog clock which consists of two hands one for hour and another for minute. She wants to calculate the shorter angle formed between hour and minute hand at any given time. The input contains two number <code class="code-var">h</code> and
+							<code class="code-var">m</code>, which represents the current time as hour and minutes.
+						</p>
+						<p class="question-note">
+							<strong>Note: </strong>
+							Complete the <code class="code-var">Minimal_Angle</code> function. No need to take any input.
+						</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>var Minimal_Angle = (h, m) => {
+    let hrAngle = (((h * 360) / 12) + ((m *360) / (12 * 60)));
+    let minAngle = ((m * 360) / 60);
+    let angle = Math.abs(hrAngle - minAngle);
+    if(angle >= 180){
+        angle = 360 - angle;
+    }
+    return angle;
+};</code></pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans2" class="answers">
+					<summary id="que2" class="questions">
+						&nbsp;<span class="que-name-span"> Check whether the year is Leap year or not.</span>
+						<p class="que-main-para">Write a program which takes an year <code class="code-var">N</code> as input from the user and find out whether the given year is a Leap Year or not</p>
+						<p class="question-note"><strong>Note: </strong>Complete the <code class="code-var">Check_Leap</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>var Check_Leap = (year) => {
+if((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)){
+    return "Leap Year";
+}
+else return "Non Leap Year";
+};</code></pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans3" class="answers">
+					<summary id="que3" class="questions">
+						&nbsp;<span class="que-name-span"> Perfect Number Check.</span>
+						<p class="que-main-para">
+							Have you heard of Perfect numbers? If not let me tell you what is it, Perfect Numbers are integers that are equal to the sum of all its divisors except that number itself.
+							<br />
+							Now, You are given an integer <code class="code-var">N</code>, write a program to check whether the given number is a Perfect Number or not.
+						</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Perfect_Check</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>var Perfect_Check = (N) => {
+    let sum = 1;
+    for(let i = 1; i &lt; N; i++){
+        sum += i; 
+    }
+    if(sum === N){
+        return "YES"
+    }
+    else return "NO";
+};</code></pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans4" class="answers">
+					<summary id="que4" class="questions">
+						&nbsp;<span class="que-name-span"> Reverse a Number.</span>
+						<p class="que-main-para">Write a program which takes a numebr <code class="code-var">N</code> as input from the user and You need to reverse the number.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Reverse_Number</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>var Reverse_Number = (N) => {
+let reverse = 0;
+while(N > 0){
+    reverse = reverse * 10 + N % 10;
+    N = Math.floor(N / 10);
+}
+return reverse; 
+};</code></pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans5" class="answers">
+					<summary id="que5" class="questions">
+						&nbsp;<span class="que-name-span"> Substring Check.</span>
+						<p class="que-main-para">You are given two strings <code class="code-var">S1</code> and <code class="code-var">S2</code>, you need to check whether the string S1 is a substring of string S2 or not.</p>
+						<p class="question-note"><strong>Note:</strong> Complete the <code class="code-var">Substring_Check</code> function. No need to take any input.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><code>var Substring_Check = (S1, S2) => {
+const arr = S1.split(" ");
+for(let i=0;i &lt; arr.length;i++){
+    if(arr[i] === S2){
+        return "YES";
+    }
+}
+return "NO";
+};</code></pre>
+					</div>
+				</details>
+			</section>
+		</main>
+	</body>
+</html>

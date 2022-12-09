@@ -103,7 +103,8 @@ pre {
 	font-size: 1.1em;
 }
 
-ol {
+ol,
+ul {
 	margin: 0 0 0 60px;
 	color: rgb(255 240 240);
 	text-shadow: 0 0 1px rgb(252 72 255);
