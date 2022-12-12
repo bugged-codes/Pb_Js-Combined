@@ -65,8 +65,28 @@
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Ans:-</div>
-						<pre><code>
-                            .
+						<pre><code>var Count_Occ = (s) => {
+    let Arr = s.split("").sort();
+    var p;
+    let map1 = new Map();
+    for(let i =0; i&lt;Arr.length;i++){
+        p=0;
+        Arr.reduce((acc,val)=>{
+    	    if(val == Arr[i]){
+                p=acc+1;
+    	    }
+    	    return p;
+        }, 0);
+        map1.set(`${Arr[i]}` , p);
+    }
+    let z = [];
+    map1.forEach((value,key)=>{
+        if(value>1){
+    	    z.push(key + "" + value);
+        }
+    });
+    return (z.join(""));
+						  };
                         </code></pre>
 					</div>
 				</details>
@@ -261,19 +281,19 @@
 					<div class="details-flex">
 						<div class="div-flex-child1">Ans:-</div>
 						<pre><code>var Split_the_string = (S) => {
-word = ""
-arr = []
-for(let i=0;i &lt; S.length;i++){
-    if(S[i]!==" "){
-        word += S[i]
+    word = ""
+    arr = []
+    for(let i=0;i &lt; S.length;i++){
+        if(S[i]!==" "){
+            word += S[i]
+        }
+        else{
+            arr.push(word);
+            word = ""
+        }
     }
-    else{
-        arr.push(word);
-        word = ""
-    }
-}
-arr.push(word)
-return arr
+    arr.push(word)
+    return arr
 };</code></pre>
 					</div>
 				</details>

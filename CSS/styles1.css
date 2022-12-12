@@ -110,6 +110,10 @@ ul {
 	text-shadow: 0 0 1px rgb(252 72 255);
 }
 
+table {
+	margin-left: 100px;
+}
+
 .que-name-span {
 	font-weight: bold;
 	font-size: 1.1em;

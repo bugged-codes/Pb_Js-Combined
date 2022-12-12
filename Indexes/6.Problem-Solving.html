@@ -54,10 +54,10 @@
 					<div class="details-flex">
 						<div class="div-flex-child1">Ans:-</div>
 						<pre><code>var Check_Leap = (year) => {
-if((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)){
-    return "Leap Year";
-}
-else return "Non Leap Year";
+    if((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)){
+    	return "Leap Year";
+    }
+    else return "Non Leap Year";
 };</code></pre>
 					</div>
 				</details>
@@ -96,12 +96,12 @@ else return "Non Leap Year";
 					<div class="details-flex">
 						<div class="div-flex-child1">Ans:-</div>
 						<pre><code>var Reverse_Number = (N) => {
-let reverse = 0;
-while(N > 0){
-    reverse = reverse * 10 + N % 10;
-    N = Math.floor(N / 10);
-}
-return reverse; 
+    let reverse = 0;
+    while(N > 0){
+        reverse = reverse * 10 + N % 10;
+        N = Math.floor(N / 10);
+    }
+    return reverse; 
 };</code></pre>
 					</div>
 				</details>
@@ -115,13 +115,13 @@ return reverse;
 					<div class="details-flex">
 						<div class="div-flex-child1">Ans:-</div>
 						<pre><code>var Substring_Check = (S1, S2) => {
-const arr = S1.split(" ");
-for(let i=0;i &lt; arr.length;i++){
-    if(arr[i] === S2){
-        return "YES";
+    const arr = S1.split(" ");
+    for(let i=0;i &lt; arr.length;i++){
+        if(arr[i] === S2){
+            return "YES";
+        }
     }
-}
-return "NO";
+    return "NO";
 };</code></pre>
 					</div>
 				</details>
