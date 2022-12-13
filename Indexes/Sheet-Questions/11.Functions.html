@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,  initial-scale=1.0" />
+
+		<!-- Favicons -->
+		<link type="image/png" sizes="32x32" rel="icon" href="../Assets/Favicons/1.favicon-32x32.png" />
+
+		<link rel="stylesheet" href="../../CSS/styles1.css" />
+
+		<title>JS-DOM Questions</title>
+
+		<style>
+			.examples,
+			#que10-text {
+				height: fit-content;
+				width: fit-content;
+				margin-left: 120px;
+			}
+			#que5-example,
+			#que10-example,
+			.que-parent-flex {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				border: 1px solid white;
+				align-items: center;
+			}
+			.flex-example {
+				width: 100px;
+				height: 150px;
+				background-color: slategray;
+				border: 2px solid white;
+				margin: 10px;
+				box-sizing: border-box;
+			}
+			.time-containers {
+				width: 22px;
+				height: 20px;
+				border: 1px solid white;
+				margin: 5px;
+				display: flex;
+				flex-flow: column nowrap;
+				align-items: center;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<header class="headings">
+				<h1 id="h1-heading1">JS-DOM Questions.</h1>
+			</header>
+			<section id="sec1">
+				<details id="ans1" class="answers">
+					<summary id="que1" class="questions">
+						&nbsp;<span class="que-name-span"> Selection by element id.</span>
+						<br />
+						<p class="que-main-para">Write the JS code to access element which is having id as "text"</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Code:-</div>
+						<pre><code>document.getElementById("text");
+                            
+            <b> OR</b>
+
+document.querySelector("#text");</code></pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans2" class="answers">
+					<summary id="que2" class="questions">
+						&nbsp;<span class="que-name-span"> Selection by element tag.</span>
+						<p class="que-main-para">Write the code to access element which is having tag as "h1".</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Code:-</div>
+						<pre><code>document.getElementsByTagName("")
+            
+            <b> OR</b>
+
+document.querySelector("h1")</code></pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans3" class="answers">
+					<summary id="que3" class="questions">
+						&nbsp;<span class="que-name-span"> Selection by element class.</span>
+						<p class="que-main-para">Write the code to access element which is having class as "box".</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Code:-</div>
+						<pre><code>document.getElementByClass("box");
+        
+            <b> OR</b>
+
+document.querySelector(".box");</code></pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans4" class="answers">
+					<summary id="que4" class="questions">
+						&nbsp;<span class="que-name-span"> HTML Element text manipulation.</span>
+						<p class="que-main-para"><code class="code-var">&lt;h1&gt; Hello &lt;/h &gt;</code> Change the heading from "Hello" to "Hello World" using DOM functions</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Code:-</div>
+						<pre><code>
+document.querySelector("h1").textContent = "Hello World!";
+                        </code></pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans5" class="answers">
+					<summary id="que5" class="questions">
+						&nbsp;<span class="que-name-span"> Flexbox direction manipulation.</span>
+						<p class="que-main-para">
+							Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction.
+						</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Code:-</div>
+						<pre><code>function flexDirection() {
+    let direction = document.getElementById("que5-example");
+
+    if (direction.style.flexDirection === "row") {
+        document.getElementById("que5-btn").textContent = "Row";
+        direction.style.flexDirection = "column";
+    } else {
+        document.getElementById("que5-btn").textContent = "Column";
+        direction.style.flexDirection = "row";
+    }
+};</code></pre>
+					</div>
+				</details>
+				<div class="examples">
+					<div id="que5-example" class="que5-example">
+						<div id="flex-example1" class="flex-example"></div>
+						<div id="flex-example2" class="flex-example"></div>
+						<div id="flex-example3" class="flex-example"></div>
+					</div>
+					<button id="que5-btn" onclick="flexDirection()">Click Me</button>
+				</div>
+				<hr />
+				<details id="ans6" class="answers">
+					<summary id="que6" class="questions">
+						&nbsp;<span class="que-name-span"> Window vs Document.</span>
+						<p class="que-main-para">What’s the difference between window vs document?</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Ans:-</div>
+						<pre><b>Window:</b> The window object is the topmost object of the DOM hierarchy. 
+	It represents a browser window or frame that displays the contents of the webpage.
+	Whenever a window appears on the screen to display the contents of the document, the window object is created. 
+       Syntax: <code>window.property_name;</code>
+
+<b>Document:</b> The document object represent a web page that is loaded in the browser.
+	  By accessing the document object, we can access the element in the HTML page. 
+	  With the help of document objects, we can add dynamic content to our web page.
+	  The document object can be accessed with a window.document or just document.
+	Syntax: <code>document.property_name;</code> </pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans7" class="answers">
+					<summary id="que7" class="questions">
+						&nbsp;<span class="que-name-span"> Manipulate CSS style attribute.</span>
+						<p class="que-main-para"><code class="code-var">&lt;h1&gt; Hello &lt;/h1&gt;</code> Add one style attribute and give text color as red and id attribute and give the id value as "heading" in the above given h1 tag using DOM functions.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Code:-</div>
+						<pre><b>For setting ID:</b><code> document.querySelector("h1").id = "heading";</code>
+
+<b>For changing color:</b><code> document.querySelector("h1").style.color = "red";</code></pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans8" class="answers">
+					<summary id="que8" class="questions">
+						&nbsp;<span class="que-name-span"> Textcontent manipulation.</span>
+						<p class="que-main-para">Create an HTML page having content as "Hello world" and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Code:-</div>
+						<pre><code>function changeText() {
+    let text = document.getElementById("que8-example");
+    if (text.textContent === "Hello World..!") {
+    	text.textContent = "Welcome to Elevation Academy.";
+    } else if ((text.textContent = "Welcome to Elevation Academy.")) {
+    	text.textContent = "Hello World..!";
+    }
+};</code></pre>
+					</div>
+				</details>
+				<div class="examples">
+					<p id="que8-example" style="margin-left: 0; border: 1px solid white">Hello World..!</p>
+					<button id="que8-btn" onclick="changeText()">Change Text</button>
+				</div>
+				<hr />
+				<details id="ans9" class="answers">
+					<summary id="que9" class="questions">
+						&nbsp;<span class="que-name-span"> Real Time clock.</span>
+						<p class="que-main-para">Write code to implement timer clock using JS --display HH:MM:SS-- the time should keep updating every second.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Code:-</div>
+						<pre><code>setInterval(() => {
+    let currentTime = new Date();
+    let hr = currentTime.getHours();
+    let min = currentTime.getMinutes();
+    let sec = currentTime.getSeconds();
+
+    if (hr &lt; 10) {
+    	hr = `0${hr}`;
+    }
+    document.getElementById("hr-time").textContent = hr;
+    document.getElementById("min-time").textContent = min;
+    document.getElementById("sec-time").textContent = sec;
+}, 1000);</code></pre>
+					</div>
+				</details>
+				<div class="examples">
+					<div id="que9-example" class="que-parent-flex" style="border: unset">
+						Time:
+						<div id="hr-time" class="time-containers"></div>
+						<div id="min-time" class="time-containers"></div>
+						<div id="sec-time" class="time-containers"></div>
+					</div>
+				</div>
+				<hr />
+				<details id="ans10" class="answers">
+					<summary id="que10" class="questions">
+						&nbsp;<span class="que-name-span"> Print selction.</span>
+						<p class="que-main-para">Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Code:-</div>
+						<pre><code>function year() {
+    let year = document.getElementById("year-select").value;
+    document.getElementById("que10-text").textContent = year;
+};</code></pre>
+					</div>
+				</details>
+				<div class="examples">
+					<div id="que10-example" style="border: unset">
+						<select name="Year" id="year-select">
+							<option value="Select">Select the year</option>
+							<option value="2020-2021">2020-2021</option>
+							<option value="2021-2022">2021-2022</option>
+							<option value="2022-2023">2022-2023</option>
+						</select>
+						<button id="que10-btn" onclick="year()">Click Me</button>
+						<div id="que10-text"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<script src="./answer-code.js"></script>
+	</body>
+</html>

@@ -99,8 +99,9 @@ pre {
 	box-shadow: inset 0px 0px 20px 7px rgb(0 255 247 / 25%);
 	word-break: break-all;
 	color: white;
-	text-shadow: 0 0 1px white;
+	/* text-shadow: 0 0 1px white; */
 	font-size: 1.1em;
+	white-space: break-spaces;
 }
 
 ol,
