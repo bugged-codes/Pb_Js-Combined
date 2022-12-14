@@ -188,4 +188,5 @@ progress {
 /* 2nd Header main content borders */
 #content-div2 {
 	border-radius: 0 0 15px 15px;
+	background-image: linear-gradient(360deg, rgb(8 131 66 / 68%), rgb(51 255 203 / 10%) 130%);
 }

@@ -6,6 +6,7 @@
 // ?AOO Q.1) Ans:
 //
 
+//
 // ! *************************************************** 2)DOM Questions --> 11 *************************************************
 // ?DOM Q.1) Ans:
 // document.getElementById("text");
@@ -83,12 +84,39 @@ function year() {
 // }
 
 // ?FUNCTION Q.2) Ans:
-// ?FUNCTION Q.2) Ans:
-// ?FUNCTION Q.2) Ans:
-// ?FUNCTION Q.2) Ans:
 // function sum(a, b){
 // 	sum = a+b;
 // 	return `Sum of ${a} and ${b} is ${sum}`;
 // }
 
 // ?FUNCTION Q.3) Ans:
+// const max = (a, b) => a > b ? a : b;
+// console.log(max(5, 6));
+
+// ?FUNCTION Q.4) Ans:
+// Undefined
+
+// ?FUNCTION Q.5) Ans:
+// Undefined
+// 21
+
+// ?FUNCTION Q.6) Ans:
+// 20
+// 40
+
+// ?FUNCTION Q.7) Ans:
+// function factorial(a){
+//     if(a !== 0){
+//         let ans = 1;
+//         for(let i=2; i<=a; i++){
+//             ans = ans * i;
+//         }
+//         return ans;
+//     }
+// }
+
+// console.log(factorial(a));
+
+//
+// ! ***************************************** 4)Inheritance & Prototype Questions --> 7 *****************************************
+// ?I&P Q.1) Ans:
