@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 html {
 	color-scheme: dark;
 	background-color: #222831;
+	font-family: "Poppins", sans-serif;
 }
 body {
 	background-image: linear-gradient(69deg, rgb(0 153 255 / 40%), rgb(0 255 187 / 40%) 100%);
@@ -36,7 +38,6 @@ details summary::before {
 	color: rgb(255 93 93);
 	text-shadow: 0 0 1px red;
 	font-size: 1.1em;
-	letter-spacing: 0.1em;
 }
 /* details[open] summary::before{
     content:"Ans:";
@@ -106,7 +107,7 @@ pre {
 
 ol,
 ul {
-	margin: 0 0 0 60px;
+	margin: 0 0 0 65px;
 	color: rgb(255 240 240);
 	text-shadow: 0 0 1px rgb(252 72 255);
 }
@@ -127,6 +128,12 @@ table {
 	/* text-decoration: underline; */
 	font-size: 0.9em;
 	color: rgb(188 188 188);
+}
+
+#total-questions {
+	position: absolute;
+	top: 3rem;
+	right: 4rem;
 }
 
 @media only screen and (max-width: 480px) {
