@@ -10,142 +10,158 @@
 
 		<link rel="stylesheet" href="../../CSS/styles1.css" />
 
-		<title>JS-Functions Questions</title>
+		<title>JS-Array of Objects Questions</title>
+
+		<style>
+			.margin-span {
+				margin-left: 225px;
+			}
+		</style>
 	</head>
 	<body>
+		<div id="total-questions">Total Number of Questions: 8</div>
 		<main>
 			<header class="headings">
-				<h1 id="h1-heading1">JS-Functions Questions.</h1>
+				<h1 id="h1-heading1">JS-Array of Objects Questions.</h1>
 			</header>
 			<section id="sec1">
+				<div class="dataset">
+					<code class="code-var"> let studentRecords = [ {name: 'John', id: 123, marks : 98 }, {name: 'Baba', id: 101, marks : 23 }, {name: 'yaga', id: 200, marks : 45 }, <br /><span class="margin-span"></span>{name: 'Wick', id: 115, marks : 75 } ]; </code>
+				</div>
 				<details id="ans1" class="answers">
 					<summary id="que1" class="questions">
-						&nbsp;<span class="que-name-span"> Zero Parameter Function.</span>
+						&nbsp;<span class="que-name-span"> Capitalize values.</span>
 						<br />
-						<p class="que-main-para">Create one function with zero parameter having a console statement</p>
+						<p class="que-main-para">We are interested in retrieving only the name of the students and all the names should be in caps. e.g: ['JOHN', 'BABA', 'YAGA', 'WICK']</p>
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
-						<pre><code>function log(){
-    console.log("Hello World");
-};</code></pre>
+						<pre><code>let names = studentRecords.map(({name}) => name.toUpperCase());
+console.log(names);</code></pre>
 					</div>
 				</details>
 				<hr />
 				<details id="ans2" class="answers">
 					<summary id="que2" class="questions">
-						&nbsp;<span class="que-name-span"> Simple Function.</span>
-						<p class="que-main-para">Create one function which takes two values as a parameter and print the sum of them as "Sum of 3, 4 is 7".</p>
+						&nbsp;<span class="que-name-span"> Conditions for AOO.</span>
+						<p class="que-main-para">
+							Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks. <br />
+							e.g: [{name: 'John', id: 123, marks : 98 },{name: 'Wick', id: 115, marks : 75 }].
+						</p>
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
-						<pre><code>function sum(a, b){
-    sum = a+b;
-    return `Sum of ${a} and ${b} is ${sum}`;
-};</code></pre>
+						<pre><code>const newArr = studentRecords.map(({name, id, marks}) => {
+    if(marks > 50){
+        console.log({name, id, marks});
+    }
+});</code></pre>
 					</div>
 				</details>
 				<hr />
 				<details id="ans3" class="answers">
 					<summary id="que3" class="questions">
-						&nbsp;<span class="que-name-span"> Arrowhead Function.</span>
-						<p class="que-main-para">Create one arrow function.</p>
+						&nbsp;<span class="que-name-span"> Multiple conditions for AOO.</span>
+						<p class="que-main-para">Retrieve the details of students who scored more than 50 marks and have id greater than 120.</p>
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
-						<pre><code>const max = (a, b) => a > b ? a : b;
-    console.log(max(5, 6));</code></pre>
+						<pre><code>const newArr = studentRecords.map(({name, id, marks}) => {
+    if(marks > 50 && id > 120){
+        console.log({name, id, marks});
+    }
+});</code></pre>
 					</div>
 				</details>
 				<hr />
 				<details id="ans4" class="answers">
 					<summary id="que4" class="questions">
-						&nbsp;<span class="que-name-span"> Print Output.</span>
-						<p class="que-main-para">
-							<code>
-								var x = 21; <br />
-								var girl = function () { <br />
-								&emsp;&emsp;console.log(x); <br />
-								&emsp;&emsp;var x = 20; <br />
-								}; <br />
-								girl ();</code
-							>
-						</p>
+						&nbsp;<span class="que-name-span"> Summing up values.</span>
+						<p class="que-main-para">Consider the same scenario we have discussed above, but this time we would like to know the sum total of the marks of all students.</p>
 					</summary>
 					<div class="details-flex">
-						<div class="div-flex-child1">Output:-</div>
-						<pre><code>Undefined</code></pre>
+						<div class="div-flex-child1">Code:-</div>
+						<pre><code>var sum = 0;
+    let markSum = studentRecords.forEach(({marks}) => {
+    	sum = sum + marks;
+    	return sum;
+    });
+console.log(sum);</code></pre>
 					</div>
 				</details>
 				<hr />
 				<details id="ans5" class="answers">
 					<summary id="que5" class="questions">
-						&nbsp;<span class="que-name-span"> Print Output.</span>
-						<p class="que-main-para">
-							<code>
-								var x = 21; <br />
-								girl (); <br />
-								console.log(x) <br />
-								function girl() { <br />
-								&emsp;&emsp;console.log(x); <br />
-								&emsp;&emsp;var x = 20; <br />
-								};</code
-							>
-						</p>
+						&nbsp;<span class="que-name-span"> More than 50.</span>
+						<p class="que-main-para">This time we want to get only the names of the students who scored more than 50 marks from the same dataset used above.</p>
 					</summary>
 					<div class="details-flex">
-						<div class="div-flex-child1">Output:-</div>
-						<pre><code>Undefined
-21</code></pre>
+						<div class="div-flex-child1">Code:-</div>
+						<pre><code>let names = studentRecords.map(({name, marks}) =>{
+    if(marks > 50){
+    	console.log({name})
+    }
+});</code></pre>
 					</div>
 				</details>
 				<hr />
 				<details id="ans6" class="answers">
 					<summary id="que6" class="questions">
-						&nbsp;<span class="que-name-span"> Print Output.</span>
-						<p class="que-main-para">
-							<code>
-								var x = 21; <br />
-								a(); <br />
-								b(); <br />
-								<br />
-								function a() { <br />
-								&emsp;&emsp;x = 20; <br />
-								&emsp;&emsp;console.log(x); <br />
-								}; <br />
-								<br />
-								function b() { <br />
-								&emsp;&emsp;x = 40; <br />
-								&emsp;&emsp;console.log(x); <br />
-								};</code
-							>
-						</p>
+						&nbsp;<span class="que-name-span"> Condition on AOO.</span>
+						<p class="que-main-para">This time we are required to print the sum of marks of the students with id > 120.</p>
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Output:-</div>
-						<pre><code>20
-40</code></pre>
+						<pre><code>var sum = 0;
+    let markSum = studentRecords.forEach(({marks, id}) => {
+    	if(id >= 120){
+    		sum = sum + marks;
+    		return sum;
+    	}
+    });
+console.log(sum);</code></pre>
 					</div>
 				</details>
 				<hr />
 				<details id="ans7" class="answers">
 					<summary id="que7" class="questions">
-						&nbsp;<span class="que-name-span"> Factorial Function.</span>
-						<p class="que-main-para">Write a function that accepts parameter n and returns factorial of n.</p>
+						&nbsp;<span class="que-name-span"> Passed with grace.</span>
+						<p class="que-main-para">This time we are required to print the total marks of the students with marks greater than 50 after a grace of 15 marks has been added to those students who scored less than 50.</p>
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
-						<pre><code>function factorial(a){
-    if(a !== 0){
-    	let ans = 1;
-    	for(let i=2; i&lt;=a; i++){
-    		ans = ans * i;
-    	}
-    	return ans;
-    }
-};
-						
-console.log(factorial(a));</code></pre>
+						<pre><code>var sum = 0;
+    var newmarks = 0;
+    let markSum = studentRecords.forEach(({marks, id}) => {
+    		newmarks = marks + 15;
+    		if(newmarks >= 50){
+    			sum = sum + newmarks;
+    			return sum;
+    		}
+    });
+console.log(sum-30);</code></pre>
+					</div>
+				</details>
+				<hr />
+				<details id="ans8" class="answers">
+					<summary id="que8" class="questions">
+						&nbsp;<span class="que-name-span"> Create Array with Objects.</span>
+						<p class="que-main-para">Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects.</p>
+					</summary>
+					<div class="details-flex">
+						<div class="div-flex-child1">Code:-</div>
+						<pre><code>let student2 = {"name":"stu2", "class":"1st", "rollNo":"12"};
+let student3 = {"name":"stu3", "class":"2nd", "rollNo":"21"};
+let student4 = {"name":"stu4", "class":"2nd", "rollNo":"22"};
+let student5 = {"name":"stu5", "class":"3rd", "rollNo":"31"};
+
+const students = [{"name":"stu1", "class":"1st", "rollNo":"11"}];
+
+students.push(student2, student3, student4, student5);
+
+students.push({"name":"stu6", "class":"4th", "rollNo":"41"})
+
+console.log(students)</code></pre>
 					</div>
 				</details>
 			</section>

@@ -182,7 +182,15 @@
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Ans:-</div>
-						<pre><code></code></pre>
+						<pre><code>const CompletePattern = (N) => {
+    for(let i = 1;  i <= N;  i++){
+    let s = " ";
+    	for(let j = 1; j <= i; j++){
+    	    s = s + "X";
+    	}
+    console.log(s)
+    }
+};</code></pre>
 					</div>
 				</details>
 				<div id="que11-example" class="examples">
@@ -202,7 +210,15 @@
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Ans:-</div>
-						<pre><code></code></pre>
+						<pre><code>const CompletePattern = (N) => {
+    for(let r = 1; r <= N; r++){
+    	let s = "";
+    	for(let c = 1; c <= r; c++){
+    	    s = s + c + " ";
+    	}
+    	console.log(s)
+    }  
+};</code></pre>
 					</div>
 				</details>
 				<div id="que12-example" class="examples">
@@ -222,7 +238,15 @@
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Ans:-</div>
-						<pre><code></code></pre>
+						<pre><code>const CompletePattern = (N) => {
+    for(let r = 1; r <= N; r++){
+    	let s = " ";
+    	for(let c = 1; c <= r; c++){
+    	    s = s + r + " ";
+    	}
+    	console.log(s);
+    }  
+};</code></pre>
 					</div>
 				</details>
 				<div id="que13-example" class="examples">
@@ -246,11 +270,11 @@
 					</div>
 				</details>
 				<div id="que14-example" class="examples">
-					1 <br />
-					0 1 <br />
-					1 0 1 <br />
-					0 1 0 1 <br />
-					1 0 1 0 1
+					# # # # 1 <br />
+					# # # 2 1 <br />
+					# # 3 2 1 <br />
+					# 4 3 2 1<br />
+					5 4 3 2 1
 				</div>
 				<hr />
 				<details id="ans15" class="answers">
@@ -265,12 +289,11 @@
 					</div>
 				</details>
 				<div id="que15-example" class="examples">
-					# # # # X
-					<br />
-					# # # X X <br />
-					# # X X X <br />
-					# X X X X<br />
-					X X X X X
+					1 <br />
+					0 1 <br />
+					1 0 1 <br />
+					0 1 0 1 <br />
+					1 0 1 0 1
 				</div>
 				<hr />
 				<details id="ans16" class="answers">

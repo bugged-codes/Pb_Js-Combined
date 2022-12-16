@@ -10,19 +10,20 @@
 
 		<link rel="stylesheet" href="../../CSS/styles1.css" />
 
-		<title>JS-Functions Questions</title>
+		<title>JS-I&PQuestions</title>
 	</head>
 	<body>
+		<div id="total-questions">Total Number of Questions: 4</div>
 		<main>
 			<header class="headings">
-				<h1 id="h1-heading1">JS-Functions Questions.</h1>
+				<h1 id="h1-heading1">JS-Inheritance & Prototypes Questions.</h1>
 			</header>
 			<section id="sec1">
 				<details id="ans1" class="answers">
 					<summary id="que1" class="questions">
-						&nbsp;<span class="que-name-span"> Zero Parameter Function.</span>
+						&nbsp;<span class="que-name-span"> Inheritance using prototypes.</span>
 						<br />
-						<p class="que-main-para">Create one function with zero parameter having a console statement</p>
+						<p class="que-main-para">Create 2 objects - parent and child. Attach methods to parent and use those methods in child object using parents prototype</p>
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
@@ -34,8 +35,8 @@
 				<hr />
 				<details id="ans2" class="answers">
 					<summary id="que2" class="questions">
-						&nbsp;<span class="que-name-span"> Simple Function.</span>
-						<p class="que-main-para">Create one function which takes two values as a parameter and print the sum of them as "Sum of 3, 4 is 7".</p>
+						&nbsp;<span class="que-name-span"> Prototype Chaining.</span>
+						<p class="que-main-para">Write code to explain prototype chaining.</p>
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
@@ -48,8 +49,8 @@
 				<hr />
 				<details id="ans3" class="answers">
 					<summary id="que3" class="questions">
-						&nbsp;<span class="que-name-span"> Arrowhead Function.</span>
-						<p class="que-main-para">Create one arrow function.</p>
+						&nbsp;<span class="que-name-span"> Method Inheritance.</span>
+						<p class="que-main-para">Add a method to calculate sum of all elements in Array in array's protype, use that method to calculate sum for multiple arrays.</p>
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
@@ -60,92 +61,12 @@
 				<hr />
 				<details id="ans4" class="answers">
 					<summary id="que4" class="questions">
-						&nbsp;<span class="que-name-span"> Print Output.</span>
-						<p class="que-main-para">
-							<code>
-								var x = 21; <br />
-								var girl = function () { <br />
-								&emsp;&emsp;console.log(x); <br />
-								&emsp;&emsp;var x = 20; <br />
-								}; <br />
-								girl ();</code
-							>
-						</p>
+						&nbsp;<span class="que-name-span"> Print Inherited properties.</span>
+						<p class="que-main-para">Write a JavaScript function to retrieve all the names of object's own and inherited properties.</p>
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Output:-</div>
 						<pre><code>Undefined</code></pre>
-					</div>
-				</details>
-				<hr />
-				<details id="ans5" class="answers">
-					<summary id="que5" class="questions">
-						&nbsp;<span class="que-name-span"> Print Output.</span>
-						<p class="que-main-para">
-							<code>
-								var x = 21; <br />
-								girl (); <br />
-								console.log(x) <br />
-								function girl() { <br />
-								&emsp;&emsp;console.log(x); <br />
-								&emsp;&emsp;var x = 20; <br />
-								};</code
-							>
-						</p>
-					</summary>
-					<div class="details-flex">
-						<div class="div-flex-child1">Output:-</div>
-						<pre><code>Undefined
-21</code></pre>
-					</div>
-				</details>
-				<hr />
-				<details id="ans6" class="answers">
-					<summary id="que6" class="questions">
-						&nbsp;<span class="que-name-span"> Print Output.</span>
-						<p class="que-main-para">
-							<code>
-								var x = 21; <br />
-								a(); <br />
-								b(); <br />
-								<br />
-								function a() { <br />
-								&emsp;&emsp;x = 20; <br />
-								&emsp;&emsp;console.log(x); <br />
-								}; <br />
-								<br />
-								function b() { <br />
-								&emsp;&emsp;x = 40; <br />
-								&emsp;&emsp;console.log(x); <br />
-								};</code
-							>
-						</p>
-					</summary>
-					<div class="details-flex">
-						<div class="div-flex-child1">Output:-</div>
-						<pre><code>20
-40</code></pre>
-					</div>
-				</details>
-				<hr />
-				<details id="ans7" class="answers">
-					<summary id="que7" class="questions">
-						&nbsp;<span class="que-name-span"> Factorial Function.</span>
-						<p class="que-main-para">Write a function that accepts parameter n and returns factorial of n.</p>
-					</summary>
-					<div class="details-flex">
-						<div class="div-flex-child1">Code:-</div>
-						<pre><code>function factorial(a){
-    if(a !== 0){
-    	let ans = 1;
-    	for(let i=2; i&lt;=a; i++){
-    		ans = ans * i;
-    	}
-    	return ans;
-    }
-};
-						
-console.log(factorial(a));</code></pre>
 					</div>
 				</details>
 			</section>
