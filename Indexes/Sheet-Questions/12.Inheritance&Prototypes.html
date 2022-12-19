@@ -27,9 +27,19 @@
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
-						<pre><code>function log(){
-    console.log("Hello World");
-};</code></pre>
+						<pre><code>const arr = [1,2,3,4,5,6];
+const arrsum = {
+	addAll:function(arr){
+		let sum = 0;
+		for(let i=0; i&lt;arr.length; i++){
+		  sum = sum + arr[i];
+		}
+		console.log(sum)
+	  }
+	}
+
+Array.__proto__ = arrsum;
+Array.addAll(arr);</code></pre>
 					</div>
 				</details>
 				<hr />
@@ -40,10 +50,7 @@
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
-						<pre><code>function sum(a, b){
-    sum = a+b;
-    return `Sum of ${a} and ${b} is ${sum}`;
-};</code></pre>
+						<pre><code></code></pre>
 					</div>
 				</details>
 				<hr />
@@ -54,8 +61,19 @@
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
-						<pre><code>const max = (a, b) => a > b ? a : b;
-    console.log(max(5, 6));</code></pre>
+						<pre><code>const arr = [1,2,3,4,5,6];
+const arrsum = {
+	addAll:function(arr){
+		let sum = 0;
+		for(let i=0; i&lt;arr.length; i++){
+		  sum = sum + arr[i];
+		}
+		console.log(sum)
+	  }
+	}
+
+Array.__proto__ = arrsum;
+Array.addAll(arr);</code></pre>
 					</div>
 				</details>
 				<hr />
@@ -71,6 +89,6 @@
 				</details>
 			</section>
 		</main>
-		<script src="./answer-code.js"></script>
+		<script src="../../Scripts/answer-code.js"></script>
 	</body>
 </html>
