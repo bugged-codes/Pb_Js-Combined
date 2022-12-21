@@ -244,7 +244,13 @@ function year() {
 // Array.addAll(arr);
 
 // ?I&P Q.4) Ans:
-//
+// var student = {
+// 	name : "Stu1",
+// 	course : "Full-stack",
+// 	rollNo : 49,
+// }
+// result = Object.keys(student)
+// console.log(result);
 //
 
 // ! ***************************************** 5)P&AA Questions --> 7 *****************************************
@@ -314,7 +320,30 @@ function year() {
 // ! Maps and Sets
 
 // ?M&S Q.1) Ans:
+// let setFn = function (str){
+//     let s = new Set();
+//     for(let i=0; i<str.length;i++){
+//         s.add(str[i]);
+//     }
+//     let chars = s
+//     for(char of chars)
+//     console.log(char);
+// }
+// setFn('abcadeecfb');
 
 // ?M&S Q.2) Ans:
-
+// let s="abcadeecfb"
+// let map = new Map()
+// for(let i=0;i < s.length;i++){
+//     if(map.has(s[i])){
+//         let value = map.get(s[i])
+//         map.set(s[i], value+1)
+//     }
+//     else{
+//     	map.set(s[i], 1)
+//     }
+// }
+// for(let [k,v] of map){
+// 	console.log(k+"="+v);
+// }
 // ! ***************************************** 5)Closures Questions --> 8 *****************************************

@@ -1,3 +1,9 @@
+// ####1
+// ###2
+// ##3
+// #4
+// 5
+
 function patternPrinting(n) {
 	for (let r = 1; r <= n; r++) {
 		let s = "";

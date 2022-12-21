@@ -22,7 +22,7 @@
 		</style>
 	</head>
 	<body>
-		<div id="total-questions">Total Number of Questions: 8</div>
+		<div id="total-questions">Total Number of Questions: 2</div>
 		<main>
 			<header class="headings">
 				<h1 id="h1-heading1">JS-Maps & Sets.</h1>
@@ -32,48 +32,44 @@
 					<summary id="que1" class="questions">
 						&nbsp;<span class="que-name-span"> 1.</span>
 						<br />
-						<p class="que-main-para">
-							<code>
-								function counter(){ <br />
-								&emsp;var counter = 0; <br />
-								&emsp;function IncreaseCounter() { <br />
-								&emsp;&emsp;return counter += 1; <br />
-								&emsp;}; <br />
-								&emsp;return IncreaseCounter; <br />
-								}; <br />
-								var counter = counter(); <br />
-								alert(counter()); <br />
-								alert(counter()); <br />
-								alert(counter()); <br />
-								alert(counter()); <br />
-							</code>
-						</p>
+						<p class="que-main-para">You are given a string (STR) of length N, consisting of only the lower case English alphabet. Your task is to remove all the duplicate occurrences of characters in the string.</p>
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
-						<pre><code></code></pre>
+						<pre><code>let setFn = function (str){
+    let s = new Set();
+    for(let i=0; i&lt;str.length;i++){
+    	s.add(str[i]);
+    }
+    let chars = s
+    for(char of chars)
+    console.log(char);
+}
+setFn('abcadeecfb');</code></pre>
 					</div>
 				</details>
 				<hr />
 				<details id="ans2" class="answers">
 					<summary id="que2" class="questions">
 						&nbsp;<span class="que-name-span"> 2.</span>
-						<p class="que-main-para">
-							<code>
-								let count = 0; <br />
-								(function () { <br />
-								&emsp;if (count === 0) { <br />
-								&emsp;&emsp;let count = 1; <br />
-								&emsp;&emsp;console.log(count); // What is logged? <br />
-								&emsp;} <br />
-								&emsp;console.log(count); // What is logged? <br />
-								})(); <br />
-							</code>
-						</p>
+						<p class="que-main-para">You are given a string (STR) of length N, you have to print the count of all alphabet.(using maps).</p>
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
-						<pre><code></code></pre>
+						<pre><code>let s="abcadeecfb"
+let map = new Map()
+for(let i=0;i < s.length;i++){
+    if(map.has(s[i])){
+        let value = map.get(s[i])
+        map.set(s[i], value+1)
+    }
+    else{
+        map.set(s[i], 1)
+    }
+}
+for(let [k,v] of map){
+    console.log(k+"="+v);
+}</code></pre>
 					</div>
 				</details>
 			</section>
