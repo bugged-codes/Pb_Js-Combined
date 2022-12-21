@@ -31,12 +31,18 @@
 				<details id="ans1" class="answers">
 					<summary id="que1" class="questions">
 						&nbsp;<span class="que-name-span"> Create a callback.</span>
-						<br />
 						<p class="que-main-para">Write one example explaining how you can write a callback function ?</p>
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
-						<pre><code></code></pre>
+						<pre><code>function one(call){
+	call()
+	console.log("After")
+}
+function call(){
+	console.log("Before")
+}
+one(call);</code></pre>
 					</div>
 				</details>
 				<hr />
@@ -47,7 +53,34 @@
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
-						<pre><code></code></pre>
+						<pre><code>function calltime(){
+ setTimeout(()=>{
+  console.log("1");
+  setTimeout(()=>{
+    console.log("2");
+    setTimeout(()=>{
+      console.log("3");
+      setTimeout(()=>{
+        console.log("4");
+    	setTimeout(()=>{
+    	  console.log("5");
+    	  setTimeout(()=>{
+    	    console.log("6")
+    	    setTimeout(()=>{
+    	      console.log("7")
+    	      },7000)
+    	    },6000)
+    	  },5000)
+    	},4000)
+      },3000)
+    },2000)
+  },1000)
+}
+calltime()</code>
+
+In asynchronus javascript <b>Callback</b> is a function that is passed as an argument to another function that executes the callback based on the result.
+<b>Callback Hell</b> is essentially nested callbacks stacked below one another forming a pyramid structure. Every callback depends/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code. 
+</pre>
 					</div>
 				</details>
 				<hr />

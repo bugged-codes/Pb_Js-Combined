@@ -72,6 +72,7 @@ p {
 	text-transform: lowercase;
 	font-style: italic;
 	font-size: 1.2em;
+	text-transform: none;
 }
 
 .details-flex {

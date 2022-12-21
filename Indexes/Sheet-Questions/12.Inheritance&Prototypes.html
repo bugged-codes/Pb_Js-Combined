@@ -59,7 +59,21 @@ Array.addAll(arr);</code></pre>
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
-						<pre><code></code></pre>
+						<pre><code>function Person(name) {
+  this.name = name;
+}
+let boy = new Person("Sam");
+						  
+Person.prototype.isPrototypeOf(boy); 
+Object.prototype.isPrototypeOf(Person.prototype); </code>
+
+Both of the above statements returns true, as a prototype is an object, a prototype can have its own prototype! In this case, the prototype of <code class="code-var">Person.prototype</code> is <code class="code-var">Object.prototype</code>.
+						
+<code>boy.hasOwnProperty("name") //returns true.</code>
+
+This is an example of the prototype chain. In this prototype chain, <code class="code-var">Person</code> is the supertype for <code class="code-var">boy</code>, while <code class="code-var">boy</code> is the subtype.
+<code class="code-var">Object</code> is a supertype for both <code class="code-var">Person</code> and <code class="code-var">boy</code>. <code class="code-var">Object</code> is a supertype for all <code class="code-var">Object</code>s in JavaScript.
+Therefore, any <code class="code-var">Object</code> can use the <code class="code-var" style="text-transform: none;">hasOwnProperty</code> method.</pre>
 					</div>
 				</details>
 				<hr />

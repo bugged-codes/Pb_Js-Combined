@@ -215,7 +215,18 @@ function year() {
 // Array.addAll(arr);
 
 // ?I&P Q.2) Ans:
+// function Person(name) {
+// 	this.name = name;
+//   }
+
+//   let boy = new Person("Sam");
+
+//   Person.prototype.isPrototypeOf(boy);
+//   Object.prototype.isPrototypeOf(Person.prototype);
+
+// 	 boy.hasOwnProperty("name") //returns true.
 //
+// Both of the above statements returns true, as a prototype is an object, a prototype can have its own prototype! In this case, the prototype of Person.prototype is Object.prototype. This is an example of the prototype chain. In this prototype chain, Person is the supertype for boy, while boy is the subtype. Object is a supertype for both Person and boy. Object is a supertype for all objects in JavaScript. Therefore, any object can use the hasOwnProperty method.
 
 // ?I&P Q.3) Ans:
 // const arr = [1,2,3,4,5,6];
@@ -240,6 +251,15 @@ function year() {
 // ! Promises and Async Await
 
 // ?PAA Q.1) Ans:
+// function one(call){
+// 	call()
+// 	console.log("After")
+// }
+// function call{
+// 	console.log("Before")
+// }
+// one(call);
+
 // function addition(a, b, callback) {
 //     let result = callback(a, b);
 //     console.log("The result is: " + result);
@@ -279,7 +299,7 @@ function year() {
 //
 
 // ?PAA Q.4) Ans:
-//
+// let prom = function check()
 
 // ?PAA Q.5) Ans:
 //
@@ -289,3 +309,12 @@ function year() {
 
 // ?PAA Q.7) Ans:
 //
+
+// ! ***************************************** 5)M&S Questions --> 2 *****************************************
+// ! Maps and Sets
+
+// ?M&S Q.1) Ans:
+
+// ?M&S Q.2) Ans:
+
+// ! ***************************************** 5)Closures Questions --> 8 *****************************************
