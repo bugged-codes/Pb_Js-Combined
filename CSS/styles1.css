@@ -44,14 +44,33 @@ details summary::before {
     color: red; 
 } */
 
+.header-flex {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-around;
+	margin-inline: 4rem;
+	margin-bottom: 3rem;
+}
+
 header {
-	margin-top: 1.5rem;
-	margin-bottom: 4rem;
+	flex-grow: 1;
 	text-decoration: underline;
 	letter-spacing: 0.1em;
 	text-align: center;
 	text-shadow: 0px 9px 13px rgb(130 255 246 / 50%);
 	color: rgb(255 240 245);
+	margin-left: 5rem;
+}
+
+#button-home {
+	background: rgb(0 0 0 / 0%);
+	border-radius: 7px;
+	width: clamp(70px, 60px, 80px);
+	height: 35px;
+	cursor: pointer;
+	font-weight: bold;
+	text-shadow: 0px 0px 6px rgb(130 255 246 / 50%);
 }
 
 hr {
@@ -131,17 +150,23 @@ table {
 	color: rgb(188 188 188);
 }
 
-#total-questions {
+/* #total-questions {
 	position: absolute;
 	top: 3rem;
 	right: 4rem;
-}
+} */
 
 .examples {
 	height: fit-content;
 	width: fit-content;
 	margin-left: 120px;
 }
+
+/* .home-btn {
+	position: relative;
+	top: 2rem;
+	left: 2rem;
+} */
 
 @media only screen and (max-width: 480px) {
 	p {
