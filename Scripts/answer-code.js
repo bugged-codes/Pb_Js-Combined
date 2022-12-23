@@ -253,7 +253,7 @@ function year() {
 // console.log(result);
 //
 
-// ! ***************************************** 5)P&AA Questions --> 7 *****************************************
+// ! ***************************************** 5)P&AA Questions --> 9 *****************************************
 // ! Promises and Async Await
 
 // ?PAA Q.1) Ans:
@@ -302,18 +302,103 @@ function year() {
 //  calltime()
 
 // ?PAA Q.3) Ans:
-//
+// let seconds = (timer, num) => {
+// 	return new Promise((resolve, reject) => {
+// 		if(num){
+// 			setTimeout(()=>{
+// 				resolve(num());
+// 			}, timer)
+// 		}
+// 		else{
+// 			reject(console.log("No Number"))
+// 		}
+// 	})
+// }
+
+// seconds(0, ()=>console.log("Start"))
+// .then(()=>{
+// 	seconds(1000, ()=>console.log("1"))
+// })
+// .then(()=>{
+// 	seconds(2000, ()=>console.log("2"))
+// })
+// .then(()=>{
+// 	seconds(3000, ()=>console.log("3"))
+// })
+// .then(()=>{
+// 	seconds(4000, ()=>console.log("4"))
+// })
+// .then(()=>{
+// 	seconds(5000, ()=>console.log("5"))
+// })
+// .then(()=>{
+// 	seconds(6000, ()=>console.log("6"))
+// })
+// .then(()=>{
+// 	seconds(7000, ()=>console.log("7"))
+// })
 
 // ?PAA Q.4) Ans:
-// let prom = function check()
+// let func1 = function(ans){
+//     return new Promise((resolve,reject) => {
+// 		  if(ans == 'yes'){
+// 			  resolve('Promise resolved')
+// 		  }else{
+// 			  reject('Promise rejected')
+// 		}
+// 	   })
+// };
+// func1("yes")
+// 	.then((response) => console.log(response))
+// 	.catch((err) => console.error(err));
 
 // ?PAA Q.5) Ans:
-//
+// function addition(msg,c){
+//     console.log(msg);
+// }
+// function c(p,q){
+//     console.log("sum of",p,"&",q,"is",p+q);
+// }
+// addition("completed!",c(30,40));
 
 // ?PAA Q.6) Ans:
-//
+// function func(){
+//     func1();
+//     function func1(){
+//         func2();
+//         function func2(){
+//             console.log("Hell..!")
+//         }
+//     }
+// }
+// func();
 
 // ?PAA Q.7) Ans:
+// let compareIt = (num) => {
+// 	return new Promise((res, rej) => {
+// 		if(num>=10){
+// 			res(console.log("Given Number is greater than 10."))
+// 		}
+// 		else{
+// 			rej(console.log("Given Number is smaller than 10."))
+// 		}
+// 	})
+// }
+//
+// compareIt(6)
+// .then(()=>console.log("Promise Functon."))
+// .catch(()=>console.log("Reject function."))
+
+// ?PAA Q.8) Ans:
+// helloWorld();
+// console.log("Wait for it...");
+// function helloWorld(){
+//     setTimeout(()=>{
+//         console.log("Function Hello World!");
+//     }, 2000)
+// }
+
+// ?PAA Q.9) Ans:
 //
 
 // ! ***************************************** 5)M&S Questions --> 2 *****************************************
@@ -346,4 +431,5 @@ function year() {
 // for(let [k,v] of map){
 // 	console.log(k+"="+v);
 // }
+
 // ! ***************************************** 5)Closures Questions --> 8 *****************************************

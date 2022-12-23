@@ -91,7 +91,41 @@ In asynchronus javascript <b>Callback</b> is a function that is passed as an arg
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
-						<pre><code></code></pre>
+						<pre><code> let seconds = (timer, num) => {
+    return new Promise((resolve, reject) => {
+        if(num){
+            setTimeout(()=>{
+                resolve(num());
+            }, timer)
+            
+        els    {
+            reject(console.log("No Number"))
+        }
+    })
+}
+
+seconds(0, ()=>console.log("Start"))
+.then(()=>{
+	seconds(1000, ()=>console.log("1"))
+})
+.then(()=>{
+	seconds(2000, ()=>console.log("2"))
+})
+.then(()=>{
+	seconds(3000, ()=>console.log("3"))
+})
+.then(()=>{
+	seconds(4000, ()=>console.log("4"))
+})
+.then(()=>{
+	seconds(5000, ()=>console.log("5"))
+})
+.then(()=>{
+	seconds(6000, ()=>console.log("6"))
+})
+.then(()=>{
+	seconds(7000, ()=>console.log("7"))
+})</code></pre>
 					</div>
 				</details>
 				<hr />
@@ -104,7 +138,18 @@ In asynchronus javascript <b>Callback</b> is a function that is passed as an arg
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
-						<pre><code></code></pre>
+						<pre><code>let x = function(ans){
+    return new Promise((resolve,reject) => {
+		if(ans == 'yes'){
+			resolve('Promise resolved')
+		}else{
+			reject('Promise rejected')
+		}
+	})
+};
+func1("yes")
+	.then((response) => console.log(response))
+	.catch((err) => console.error(err));</code></pre>
 					</div>
 				</details>
 				<hr />
@@ -115,11 +160,13 @@ In asynchronus javascript <b>Callback</b> is a function that is passed as an arg
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
-						<pre><code>let names = studentRecords.map(({name, marks}) =>{
-    if(marks > 50){
-    	console.log({name})
-    }
-});</code></pre>
+						<pre><code>function addition(msg,c){
+    console.log(msg);
+}
+function c(p,q){
+    console.log("sum of",p,"&",q,"is",p+q);
+}
+addition("completed!",c(30,40));</code></pre>
 					</div>
 				</details>
 				<hr />
@@ -130,7 +177,16 @@ In asynchronus javascript <b>Callback</b> is a function that is passed as an arg
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Output:-</div>
-						<pre><code></code></pre>
+						<pre><code>function func(){
+        func1();
+        function func1(){
+    	    func2();
+    	    function func2(){
+    		    console.log("Hell..!")
+    	    }
+        }
+    }
+func();</code></pre>
 					</div>
 				</details>
 				<hr />
@@ -141,7 +197,19 @@ In asynchronus javascript <b>Callback</b> is a function that is passed as an arg
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
-						<pre><code></code></pre>
+						<pre><code>let compareIt = (num) => {
+    return new Promise((res, rej) => {
+        if(num>=10){
+            res(console.log("Given Number is greater than 10."))
+        }
+        else{
+            rej(console.log("Given Number is smaller than 10."))
+	    }
+    })
+}
+compareIt(6)
+.then(()=>console.log("Promise Functon."))
+.catch(()=>console.log("Reject function."))</code></pre>
 					</div>
 				</details>
 				<hr />
@@ -152,7 +220,13 @@ In asynchronus javascript <b>Callback</b> is a function that is passed as an arg
 					</summary>
 					<div class="details-flex">
 						<div class="div-flex-child1">Code:-</div>
-						<pre><code></code></pre>
+						<pre><code>helloWorld();
+console.log("Wait for it...");
+function helloWorld(){
+    setTimeout(()=>{
+        console.log("Function Hello World!");
+    }, 2000)
+}</code></pre>
 					</div>
 				</details>
 				<hr />
