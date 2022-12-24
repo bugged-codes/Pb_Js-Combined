@@ -433,3 +433,40 @@ function year() {
 // }
 
 // ! ***************************************** 5)Closures Questions --> 8 *****************************************
+
+// ?Closures Q.1) Ans:
+// Alert with values as 1,2,3,4.
+
+// ?Closures Q.2) Ans:
+// 1
+
+// ?Closures Q.3) Ans:
+// 3 gets logged 3 times with 1 sec difference between each log.
+
+// ?Closures Q.4) Ans:
+//
+
+// ?Closures Q.5) Ans:
+// function counter()
+// var counter = 0;
+// function IncreaseCounter(){
+//   return counter +=1;
+// }
+// return IncreaseCounter;
+// }
+// var counter = counter();
+// alert (counter())
+// alert (counter())
+
+// ?Closures Q.6) Ans:
+// Alert with value as 12.
+
+// ?Closures Q.7) Ans:
+// Alert with value as 12.
+
+// ?Closures Q.8) Ans:
+// outerArg = 123
+// innerArg = 456
+// outerVar = a
+// innerVar = b
+// globalVar = xyz
